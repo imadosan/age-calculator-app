@@ -1,0 +1,132 @@
+:root {
+  /* Primary */
+  --purple: hsl(259, 100%, 65%);
+  --light-red: hsl(0, 100%, 67%);
+
+  /* Neutral */
+  --off-white: hsl(0, 0%, 94%);
+  --light-grey: hsl(0, 0%, 86%);
+  --smokey-grey: hsl(0, 1%, 44%);
+  --off-black: hsl(0, 0%, 8%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--off-white);
+  color: var(--smokey-grey);
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem;
+}
+
+.card--wrapper,
+.calculator--section,
+.calculator--section-inputs,
+.calculator--section-buttons,
+.results--section {
+  display: flex;
+}
+
+.card--wrapper,
+.calculator--section,
+.results--section {
+  flex-direction: column;
+}
+
+.card--wrapper {
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 84rem;
+  background-color: #fff;
+  padding: 3rem;
+  border-radius: 1rem 1rem 5rem;
+}
+
+.calculator--section {
+  gap: 2rem;
+}
+
+.calculator--section-inputs {
+  gap: 1rem;
+}
+
+.calculator--section-buttons {
+  justify-content: center;
+  width: 100%;
+}
+
+input {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  width: 100%;
+  padding: 0.5em;
+  border: 1px solid var(--light-grey);
+  border-radius: 0.5rem;
+}
+
+button {
+  background-color: var(--purple);
+  padding: 1rem;
+  border: none;
+  border-radius: 50%;
+}
+
+.results--section {
+  width: 100%;
+}
+
+.results--section p {
+  font-size: 6rem;
+  font-weight: 800;
+  font-style: italic;
+  color: var(--off-black);
+}
+
+.results--section p span {
+  color: var(--purple);
+}
+
+@media (min-width: 640px) {
+  .calculator--section-inputs {
+    width: 80%;
+  }
+
+  .calculator--section-buttons {
+    justify-content: flex-end;
+  }
+
+  input {
+    font-size: 3.2rem;
+  }
+
+  .results--section p {
+    font-size: 10.4rem;
+  }
+
+  .card--wrapper {
+    padding: 5.2rem;
+    border-radius: 3rem 3rem 20rem;
+  }
+
+  .results--section {
+    line-height: 12em;
+  }
+}
