@@ -1,13 +1,13 @@
 :root {
   /* Primary */
-  --purple: hsl(259, 100%, 65%);
-  --light-red: hsl(0, 100%, 67%);
+  --purple: #854dff;
+  --light-red: #ff5757;
 
   /* Neutral */
-  --off-white: hsl(0, 0%, 94%);
-  --light-grey: hsl(0, 0%, 86%);
-  --smokey-grey: hsl(0, 1%, 44%);
-  --off-black: hsl(0, 0%, 8%);
+  --off-white: #f0f0f0;
+  --light-grey: #dbdbdb;
+  --smokey-grey: #716f6f;
+  --off-black: #141414;
 }
 
 * {
@@ -32,7 +32,6 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 2rem;
 }
 
 .card--wrapper,
@@ -69,22 +68,53 @@ main {
 
 .calculator--section-buttons {
   justify-content: center;
+  align-items: center;
   width: 100%;
 }
 
-input {
+hr {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid var(--light-grey);
+}
+
+.label {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+
+.label--day-error,
+.label--month-error,
+.label--year-error,
+.error--message {
+  color: var(--light-red);
+}
+
+.input {
   display: block;
+  font-family: inherit;
   font-size: 2rem;
   font-weight: 700;
   width: 100%;
-  padding: 0.5em;
+  padding: 0.4em 1em;
   border: 1px solid var(--light-grey);
   border-radius: 0.5rem;
+  margin-top: 1rem;
+}
+
+.input:focus {
+  outline: 1px solid var(--purple);
+}
+
+.input--day-error,
+.input--month-error,
+.input--year-error {
+  border: 1px solid var(--light-red);
 }
 
 button {
   background-color: var(--purple);
-  padding: 1rem;
+  padding: 1.5rem;
   border: none;
   border-radius: 50%;
 }
@@ -104,7 +134,7 @@ button {
   color: var(--purple);
 }
 
-@media (min-width: 640px) {
+@media (min-width: 668px) {
   .calculator--section-inputs {
     width: 80%;
   }
@@ -113,7 +143,7 @@ button {
     justify-content: flex-end;
   }
 
-  input {
+  .input {
     font-size: 3.2rem;
   }
 
@@ -128,5 +158,9 @@ button {
 
   .results--section {
     line-height: 12em;
+  }
+
+  button {
+    padding: 2rem;
   }
 }
